@@ -11,8 +11,6 @@ import { ShoppingListEditComponent } from './ShoppingList/shopping-list-edit/sho
 import { RecipeBookComponent } from './RecipeBook/recipe-book/recipe-book.component';
 import { RecipeListComponent } from './RecipeBook/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './RecipeBook/recipe-item/recipe-item.component';
-import { IngredientComponent } from './Data/ingredient/ingredient.component';
-import { RecipeComponent } from './Data/recipe/recipe.component';
 import { RecipesComponent } from './RecipeBook/recipes/recipes.component';
 
 
@@ -25,8 +23,6 @@ import { RecipesComponent } from './RecipeBook/recipes/recipes.component';
     RecipeBookComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    IngredientComponent,
-    RecipeComponent,
     RecipesComponent
   ],
   imports: [
