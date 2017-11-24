@@ -1,10 +1,14 @@
 import {Recipe} from '../../Shared/Data/recipe.model';
-import {EventEmitter} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {Ingredient} from '../../Shared/Data/ingredient.model';
+import {ShoppinglistService} from '../ShoppingList/shoppinglist.service';
 
+@Injectable()
 export class RecipeService {
 
   recipeSelected = new EventEmitter<Recipe>();
+
+  constructor(private shoppingListService: ShoppinglistService){};
 
   private recipes: Recipe[] = [
     new Recipe('Creme Brulee',
@@ -27,6 +31,10 @@ export class RecipeService {
   getRecipes() {
     // slice() returns a new array which is a copy of the one stored. Avoids the reference issue.
     return this.recipes.slice();
+  }
+
+  addIngredientsToShoppingList(ingredients: Ingredient[]) {
+    this.shoppingListService.addIngredients(ingredients);
   }
 
 }
