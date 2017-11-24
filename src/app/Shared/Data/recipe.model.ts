@@ -1,37 +1,18 @@
+import { Ingredient } from './ingredient.model';
+
 export class Recipe {
 
-  private _name: string;
-  private _description: string;
-  private _imagePath: string;
+  public name: string;
+  public description: string;
+  public imagePath: string;
+  public ingredients: Ingredient[];
 
-  constructor(name: string, description: string, imagePath: string){
-    this._name = name;
-    this._description = description;
-    this._imagePath = imagePath;
+
+  constructor(name: string, description: string, imagePath: string, ingredients: Ingredient[]){
+    this.name = name;
+    this.description = description;
+    this.imagePath = imagePath;
+    this.ingredients = ingredients;
   }
 
-
-  get name(): string {
-    return this._name;
-  }
-
-  set name(value: string) {
-    this._name = value;
-  }
-
-  get description(): string {
-    return this._description;
-  }
-
-  set description(value: string) {
-    this._description = value;
-  }
-
-  get imagePath(): string {
-    return this._imagePath;
-  }
-
-  set imagePath(value: string) {
-    this._imagePath = value;
-  }
 }
