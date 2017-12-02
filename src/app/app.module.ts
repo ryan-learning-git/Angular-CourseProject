@@ -17,6 +17,7 @@ import {RecipeService} from './Components/RecipeBook/recipe.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import { RecipeStartComponent } from './Components/RecipeBook/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './Components/RecipeBook/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RecipeStartComponent } from './Components/RecipeBook/recipe-start/recip
     RecipesComponent,
     RecipeDetailComponent,
     DropdownDirective,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
